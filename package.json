@@ -1,0 +1,25 @@
+{
+  "name": "interestcalculator",
+  "version": "1.0.0",
+  "description": "Interest calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acaoliveira/InterestCalculator.git"
+  },
+  "author": "Ana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acaoliveira/InterestCalculator/issues"
+  },
+  "homepage": "https://github.com/acaoliveira/InterestCalculator#readme",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1"
+  }
+}

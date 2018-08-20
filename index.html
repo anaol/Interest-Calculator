@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="interestApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interest Calculator</title>
+	<!-- Bootstrap CSS -->
+	<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				</button>
+				<a class="navbar-brand" href="#/">
+					<span class="glyphicon glyphicon-euro" style="color:#5bdb48"></span>
+                		Interest Calculator
+               	</a>
+			</div>	
+		</div>
+	</nav>
+	<div class="container" style="padding-top: 70px">
+		<form>
+			<div class="form-group" ng-controller="interestCalculator as icCtrl">
+				<label for="principal">Amount:</label>
+				<input type="text" class="form-control" ng-model="icCtrl.principal"/>
+				<label for="rate">Annual Percentage Rate:</label>
+				<input type="text" class="form-control" ng-model="icCtrl.rate" />
+				<label for="time">Length in Years:</label>
+				<input type="text" class="form-control" ng-model="icCtrl.time" />
+				<br />
+				<p class="bg-success">Total Amount with Interest: <strong>{{icCtrl.total() | currency}}</strong></p>
+		      <p class="bg-danger">Total Interest Alone: <strong>{{icCtrl.interest() | currency}}</strong></p>
+			</div>
+		</form>
+	</div>
+	<!-- Jquery Library -->		
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<!-- Angular -->
+	<script src="node_modules/angular/angular.js"></script>
+	<!-- Bootstrap Library -->
+	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<!-- JavaScript file -->
+	<script src="app/app.js"></script>
+</body>
+</html>
